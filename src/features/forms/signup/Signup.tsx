@@ -32,9 +32,9 @@ const onSubmit = async (e: any) => {
     }
     dispatch(signupPending())
     try {
-        const isAuth: any = await userSignup(formData)
-        if (isAuth.status === "error"){
-            dispatch(signupFailure(isAuth.message))
+        const response: any = await userSignup(formData)
+        if (response.status === "error"){
+            dispatch(signupFailure(response.message))
         }
         dispatch(signupSuccess())
         history.push('/')

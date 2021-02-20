@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isLoading: false,
-  isAuth: false,
   error: ''
 }
 
@@ -15,7 +14,6 @@ export const passwordResetSlice = createSlice({
     },
     passwordResetSuccess: (state) => {
       state.isLoading = false
-      state.isAuth = true
       state.error = ''
     },
     passwordResetFailure: (state, { payload }) => {

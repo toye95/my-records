@@ -37,9 +37,9 @@ const onSubmit = async (e: any) => {
     }
     dispatch(passwordResetPending())
     try {
-        const isAuth: any = await resetPassword(formData)
-        if (isAuth.status === "error"){
-            dispatch(passwordResetFailure(isAuth.message))
+        const response: any = await resetPassword(formData)
+        if (response.status === "error"){
+            dispatch(passwordResetFailure(response.message))
         }
         dispatch(passwordResetSuccess())
         history.push('/')

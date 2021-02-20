@@ -2,12 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isLoading: false,
-  isAuth: false,
   error: ''
 }
 
 export const signupSlice = createSlice({
-  name: 'auth',
+  name: 'signup',
   initialState,
   reducers: {
     signupPending: (state) => {
@@ -15,7 +14,6 @@ export const signupSlice = createSlice({
     },
     signupSuccess: (state) => {
       state.isLoading = false
-      state.isAuth = true
       state.error = ''
     },
     signupFailure: (state, { payload }) => {
@@ -26,8 +24,5 @@ export const signupSlice = createSlice({
 });
 
 export const { signup, signupPending, signupSuccess, signupFailure }: any = signupSlice.actions;
-
-
-export const selectCount = (state: any) => state;
 
 export default signupSlice.reducer;
