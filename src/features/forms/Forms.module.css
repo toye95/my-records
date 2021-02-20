@@ -1,0 +1,36 @@
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.input {
+    width: 90%;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 16px 12px 16px;
+}
+
+.button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 12px 16px;
+    background-color: #3374ff;
+    border: 1px solid #3374ff;
+    border-radius: 4px;
+    color: #fff;
+    /* cursor: pointer; */
+    font-weight: bold;
+}
+
+.text {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.link {
+    text-decoration: none;
+    color: #3374ff;
+}
+
