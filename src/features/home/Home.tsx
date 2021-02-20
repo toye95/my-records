@@ -62,6 +62,11 @@ const editTitle = (id: any, title: string) => {
     setRecordId(id)
 }
 
+const logout = () => {
+    sessionStorage.clear()
+    history.push('/')
+}
+
 const deleteItem = async (id: string) => {
     try {
         const response: any = await deleteRecord(id)
@@ -81,7 +86,7 @@ useEffect(() => {
   return (
     <div className={styles.container}>
         <Card>
-            <h2>My Records</h2>
+            <h2>My Records</h2><a onClick={logout} className={styles.link}>Logout</a>
             {error && <Error message={'Error: ' + error}/>}
             <form onSubmit={onSubmit}>
                 <div className={styles.grid}>
