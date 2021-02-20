@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const passwordResetSlice = createSlice({
-  name: 'auth',
+  name: 'passwordReset',
   initialState,
   reducers: {
     passwordResetPending: (state) => {
