@@ -117,6 +117,7 @@ useEffect(() => {
                         id={item.id}
                         title={item.title} 
                         createdAt={item.createdAt} 
+                        createdBy={data.fullname}
                         handleEdit={editTitle}
                         handleDelete={deleteItem}
                         key={item.id.toString()}/>
