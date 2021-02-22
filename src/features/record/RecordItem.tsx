@@ -5,11 +5,12 @@ type RecordType = {
     id?: string,
     title: string,
     createdAt: string,
+    createdBy: string,
     handleEdit: any,
     handleDelete: any
 }
 
-function RecordItem({id, title, createdAt, handleEdit, handleDelete}: RecordType) {
+function RecordItem({id, title, createdAt, createdBy, handleEdit, handleDelete}: RecordType) {
 
   return (
       <div className={styles.container}>
@@ -20,7 +21,7 @@ function RecordItem({id, title, createdAt, handleEdit, handleDelete}: RecordType
                 </div>
                 <div>
                     <div className={styles.info}>Created by 
-                    <span className={styles.bold}> Adetoyese Kola-Balogun </span> 
+                    <span className={styles.bold}> {createdBy} </span> 
                      at <span className={styles.bold}>{createdAt}</span></div>
                 </div>
             </div>
